@@ -1,6 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Pages</h1>
+<div class="flex justify-between">
+  <h1 class="text-2xl font-bold">Pages</h1>
+  <%= link_to "Monitor a New page", new_page_path, class: "border border-gray-200 rounded shadow px-2 hover:bg-gray-100" %>
+</div>
 
 <div id="pages">
   <% @pages.each do |page| %>
@@ -11,4 +14,4 @@
   <% end %>
 </div>
 
-<%= link_to "New page", new_page_path %>
+
