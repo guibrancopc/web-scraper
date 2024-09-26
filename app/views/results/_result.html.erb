@@ -1,4 +1,4 @@
 <%= tag.div id: dom_id(result) do %>
     <div><%= result.success? ? 'Success' : 'Fail' %></div>
-    <div><%= result.created_at %></div>
+    <div><%= time_ago_in_words(result.created_at).upcase_first %></div>
 <% end %>

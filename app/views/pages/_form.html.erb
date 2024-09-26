@@ -12,8 +12,13 @@
   <% end %>
 
   <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
     <%= form.label :url, style: "display: block" %>
-    <%= form.text_field :url %>
+    <%= form.url_field :url %>
   </div>
 
   <div>

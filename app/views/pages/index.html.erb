@@ -5,13 +5,8 @@
   <%= link_to "Monitor a New page", new_page_path, class: "border border-gray-200 rounded shadow px-2 hover:bg-gray-100" %>
 </div>
 
-<div id="pages">
-  <% @pages.each do |page| %>
-    <%= render page %>
-    <p>
-      <%= link_to "Show this page", page %>
-    </p>
-  <% end %>
+<div id="pages" class="flex flex-col divide-y divide-gray-200">
+  <%= render @pages %>
 </div>
 
 
