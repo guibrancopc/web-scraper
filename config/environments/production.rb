@@ -68,9 +68,7 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
-  config.active_job.queue_adapter = :solid_queue
-  config.solid_queue.connects_to = { database: { writing: :queue } }
-
+  # config.active_job.queue_adapter = :resque
   # config.active_job.queue_name_prefix = "web_scraper_production"
 
   config.action_mailer.perform_caching = false
@@ -96,10 +94,4 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
-
-  config.action_mailer.delivery_method = :postmark
-  config.action_mailer.postmark_settings = { api_token: Rails.application.credentials.postmark_api_token }
-  
-  # update below with the production domain
-  config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
 end
