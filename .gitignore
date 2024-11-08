@@ -87,5 +87,6 @@ build-iPhoneSimulator/
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
+/config/credentials/production.key
 /config/app_environment_variables.rb
 sendgrid.env
