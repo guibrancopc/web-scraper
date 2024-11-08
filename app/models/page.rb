@@ -12,7 +12,7 @@ class Page < ApplicationRecord
         subject = "Web Crawler: Last update of your page named #{result.page.name}"
         content = "The last result for your page #{result.page.name} was #{result.success ? 'SUCCESSFULL' : 'FAILURE'}!"
 
-        EmailService.new.dispatch_email_helper(subject, content)
+        EmailService.dispatch_email_helper(subject, content)
     end
 
     def check_and_notify
