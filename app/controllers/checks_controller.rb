@@ -2,7 +2,7 @@ class ChecksController < ApplicationController
     before_action :set_page
 
     def create 
-        @page.run_check
+        @page.check_and_notify
         redirect_to @page
     end
 
