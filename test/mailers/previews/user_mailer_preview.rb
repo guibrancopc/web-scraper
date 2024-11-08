@@ -5,5 +5,4 @@ class UserMailerPreview < ActionMailer::Preview
   def success
     UserMailer.with(result: Result.last).success
   end
-
 end

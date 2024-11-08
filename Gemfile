@@ -69,3 +69,7 @@ group :test do
 end
 
 gem "tailwindcss-rails", "~> 2.7"
+
+gem "postmark-rails", "~> 0.22.1"
+
+gem "solid_queue", "~> 1.0"
